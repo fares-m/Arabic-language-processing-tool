@@ -21,8 +21,13 @@ except ImportError :raise ImportError("Faild to import 'inference' , Make sure t
 
 try :import match # type:ignore
 except ImportError :raise ImportError("Faild to import 'match' Lib , Make sure to install all requirement.")
-with open(folder_path+"/final_dict_triple.pickle" , 'rb')  as file :
-    triple_word_weight_dict = pickle.load(file)
+try:
+    with open(folder_path+"/final_dict_triple.pickle" , 'rb')  as file :
+        triple_word_weight_dict = pickle.load(file)
+except :
+    triple_word_weight_dict = {}
+    print("file 'final_dict_triple.pickle' not exist, will have bad performance. ")
+
 
 with open(folder_path+"/final_dict_quaternary.pickle" , 'rb')  as file :
     quaternary_word_weight_dict = pickle.load(file)
