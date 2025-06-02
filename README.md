@@ -1,6 +1,6 @@
 # Arabic-language-processing-tool
-Arabic lang processing tool , for preprocessing Arabic text 
-Verson 1.0
+Arabic lang processing tool , for preprocessing Arabic text <br>
+Version 1.0
 
 ### Filtering 
 contain a number of functions to preprocesse arabic text such as :
